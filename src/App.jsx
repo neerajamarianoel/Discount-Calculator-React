@@ -41,7 +41,7 @@ function App() {
   return (
     <>
       <div className="App d-flex align-items-center justify-content-center vh-100">
-        <div className="Container Row bg-white d-flex rounded-4">
+        <div className="Container Row bg-white d-flex rounded-4 shadow-lg">
           <Col lg={6} className="p-3 align-items-center">
             <img
               className="rounded-5 img-fluid"
@@ -74,7 +74,7 @@ function App() {
             <Button className="me-5 mt-4 fw-bold" style={{minWidth:"100px",backgroundColor:"rgb(115 29 207)",border:"none"}} onClick={(e) => Calculate(e)}>Calculate</Button>
             <Button className="mt-4 fw-bold" style={{minWidth:"100px", backgroundColor:"rgb(250, 97, 196)",border:"none",color:"white" }} onClick={(e)=> reset(e)}>Reset</Button>
             {payAmount !== null && discount !== null &&(
-              <Card className=" mt-5 w-50 mx-auto">
+              <Card className=" mt-5 w-50 mx-auto shadow-sm border border-none" style={{backgroundColor:"#eff4fb"}}>
                 <CardBody className="fw-bold">
                   <Card.Text><i className="fa-solid fa-sack-dollar me-4" style={{color: "#16d423"}}></i>Amount to pay : ₹{payAmount}</Card.Text>
                   <Card.Text><i className="fa-solid fa-piggy-bank me-4" style={{color: "#fe4dc6"}}></i>You Save : ₹{discount}</Card.Text>
